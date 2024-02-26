@@ -2,32 +2,18 @@
 {
     static void Main(string[] args)
     {
-        Random random = new Random();
-        int daysUntilExpiration = random.Next(12);
-        int discountPercentage = 0;
 
-        if (daysUntilExpiration == 0)
-        {
-            Console.WriteLine("Your subscription has expired.");
-        }
-        else if (daysUntilExpiration == 1)
-        {
-            Console.WriteLine("Your subscription expires within a day!");
-            discountPercentage = 20;
-        }
-        else if (daysUntilExpiration <= 5)
-        {
-            Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.");
-            discountPercentage = 10;
-        }
-        else if (daysUntilExpiration <= 10)
-        {
-            Console.WriteLine("Your subscription will expire soon. Renew now!");
-        }
+        Console.WriteLine("introduce tu edad");
+        int edad = Int32.Parse(Console.ReadLine());
 
-        if (discountPercentage > 0)
-        {
-            Console.WriteLine($"Renew now and save {discountPercentage}%.");
-        }
+        if (edad < 18) Console.WriteLine("Eres un niño");
+
+        else if (edad < 30) Console.WriteLine("Eres jóven");
+
+        else if (edad < 60) Console.WriteLine("Eres maduro");
+
+        else Console.WriteLine("Debes cuidarte ya");
+
+    
     }
 }
